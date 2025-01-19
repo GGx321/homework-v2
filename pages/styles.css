@@ -1,22 +1,22 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: #252525;
-    width: auto;
+  font-family: Arial, sans-serif;
+  background-color: #252525;
+  width: auto;
 }
 
 header{
-    margin-top: 150px;
-    display: flex;
-    height: 100px;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 5%;
+  margin-top: 150px;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
 header .text{
@@ -24,21 +24,21 @@ header .text{
 }
 
 header .button a{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: rgb(217, 176, 255);
-    font-weight: bold;
-    transition: all 0.3s;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: rgb(217, 176, 255);
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 header .button a:hover {
-    color: rgb(100, 61, 136);
-    background-color: rgb(217, 176, 255);
+  color: rgb(100, 61, 136);
+  background-color: rgb(217, 176, 255);
 }
 
 main{
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .card {
@@ -83,7 +83,7 @@ main{
 }
 
 .header {
-    padding-top: 10px;
+  padding-top: 10px;
   margin: 15px;
   margin-top: 5px;
   border-radius: 5px;
@@ -115,26 +115,26 @@ main{
   
 
 footer{
-    margin-top: 100px;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
-    align-items: flex-end;
+  margin-top: 100px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: flex-end;
 }
 
 .rights{
-    color: whitesmoke;
-    width: 70%;
-    padding-bottom: 20px;
+  color: whitesmoke;
+  width: 70%;
+  padding-bottom: 20px;
 }
 
 .buttons{
-    height: 100%;
-    width: 30%;
-    display: flex;
-    justify-content: space-evenly;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #Instagram {
