@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a{
+    display: block;
+    font-size: 24px;
+    padding: 5px 8px;
+    background-color: green;
+    border-radius: 5px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.container{
+    height: 700px;
+    width: 100%;
+    display: grid;
+    background-color: orange;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+    ". . . ."
+    "c1 c2 c3 c4"
+    ". . . .";
+}
+
+.c1{
+    grid-area: c1;
+    background-color:red ;
+}
+
+.c2{
+    grid-area: c2;
+    background-color: green;
+}
+
+.c3{
+    grid-area: c3;
+    background-color: aqua;
+}
+
+.c4{
+    grid-area: c4;
+    background-color: black;
+}

@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(219, 219, 219);;
+}
+
+header table {
+    background-color: #333;
+}
+
+header table td {
+    text-align: center;
+    padding: 10px;
+}
+
+header table td a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main ol, main ul {
+    margin: 20px;
+    padding-left: 40px;
+}
+
+main ul li, main ol li {
+    margin-bottom: 10px;
+}
+
+main ul {
+    list-style-type: disc;
+}
+
+main ol {
+    list-style-type: decimal;
+}
+
+table {
+    margin: 20px auto;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.musicians-table {
+    margin: 0;
+    border: 1px solid #000000;
+}
+
+.musicians-table th, .musicians-table td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.musicians-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
