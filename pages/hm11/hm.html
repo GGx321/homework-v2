@@ -1,65 +1,155 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <script src="navbar.js"></script>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Home Work</title>
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+    <script src="../../navbar.js"></script>
+    <link rel="stylesheet" href="../../navbar.css">
+    <link rel="stylesheet" href="../styles.css">
+    <title>JS (Объекты)</title>
 </head>
-<body id="body">
+<body>
     <div id="navbar-container"></div>
-    <main>
-        <div class="words">
-            <h3>Добро пожаловать на Home Work v2!</h3>
-            <p>Это - как вы уже поняли <span style="color:rgb(217, 176, 255); font-weight: bold;">ВТОРАЯ</span> версия моего сайта по домашним заданиям для IT Step.</p>
-            <p class="last-child">Где посмотреть домашние задания вы уже знаете. Хорошего дня!</p>
-            <a href="#projects">Проекты</a>
+    <header>
+        <div class="text">
+            <h2>JS (Объекты)</h2>
         </div>
-        <div class="image">
-            <img src="img/logo1.svg" alt="">
+        <div class="button">
+            <a href="site/index.html" target="_blank" rel="noopener noreferrer">Посмотреть</a>
+        </div>
+    </header>
+    <main>
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle">
+                      <span class="red circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="yellow circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="green circle2"></span>
+                    </div>
+                    <div class="title">
+                      <p id="title2">index.html</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly="">
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты</title>
+    <script>
+// 1)
+let employee = {};
+employee.name = "Ivan";
+employee.position = "office manager";
+employee.name = "Petro";
+delete employee.name;
+
+if (!("isFired" in employee)) {
+    employee.isFired = false;
+}
+
+let property = prompt("Введите название:");
+let value = prompt("Введите значение:");
+employee[property] = value;
+
+console.log(employee);
+
+// 2)
+function countProperties(obj) {
+    let count = 0;
+    for (let key in obj) {
+        count++;
+    }
+    return count;
+}
+console.log("Количество свойств employee:", countProperties(employee));
+
+// 3)
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
+console.log("Объект employee пустой:", isEmpty(employee));
+
+// 4)
+let salaries1 = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+};
+
+function getSum(obj) {
+    let sum = 0;
+    for (let key in obj) {
+        sum += obj[key];
+    }
+    return sum;
+}
+console.log(getSum(salaries1));
+
+// 5)
+let salaries2 = {
+    John: 100,
+    Bill: false,
+    Ann: 160,
+    Lily: null,
+    Pete: 13
+};
+
+function multiplyNumeric(obj, factor) {
+    for (let key in obj) {
+        if (typeof obj[key] === "number") {
+            obj[key] *= factor;
+        }
+    }
+}
+multiplyNumeric(salaries2, 2);
+console.log(salaries2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle">
+                      <span class="red circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="yellow circle2"></span>
+                    </div>
+                    <div class="circle">
+                      <span class="green circle2"></span>
+                    </div>
+                    <div class="title">
+                      <p id="title2">style.css</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly="">
+Пусто     
+                </textarea>
+            </div>
         </div>
     </main>
-    <div class="projects" id="projects">
-        <h1>Мои проекты</h1>
-        <div class="cards">
-            <div class="card">
-                <img src="img/portfolio.png" alt="" class="card_image">
-                <div class="card__content">
-                    <p class="card__title">Портфолио</p>
-                    <p class="card__description">Мое портфолио до которого руки не доходят.</p>
-                    <a href="https://alex-portfolio.top/" target="_blank" class="card__button">Посмотреть</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/jeski.png" alt="" class="card_image">
-                <div class="card__content">
-                    <p class="card__title">Крипто-услуги</p>
-                    <p class="card__description">Сайт создан для создания крипто-услуг. Обычный простой код</p>
-                    <a href="https://jetski-products.xyz/" target="_blank" class="card__button">Посмотреть</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/mem-coin.jpeg" alt="" class="card_image">
-                <div class="card__content">
-                    <p class="card__title">Мем токен</p>
-                    <p class="card__description">2 сайта для проекта в котором я сейчас работаю. Этот сайт находится на тестовом домене. На основном пока старая его версия. Второй сайт переписывается под swap.</p>
-                    <a href="https://govnoton-test.netlify.app/" target="_blank" class="card__button">Посмотреть</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/beauty.jpeg" alt="" class="card_image">
-                <div class="card__content">
-                    <p class="card__title">Визитка</p>
-                    <p class="card__description">Это сайт визитка для визажиста. Так же был написан ТГ бот с помощью которого можно записаться на прием (сейчас выключен).</p>
-                    <a href="https://maryka-beauty.netlify.app/" target="_blank" class="card__button">Посмотреть</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <footer id="footer">
         <div class="rights">
             All Rights Reserved <sup>&copy</sup> <sub>Олександр Самолюк</sub>
