@@ -5,11 +5,11 @@ import AnimatedText from '@/components/AnimatedText';
 
 export default function DropDown() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsDropdownOpen(false);
             }
         }
@@ -17,7 +17,7 @@ export default function DropDown() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    const homeworks = Array.from({ length: 20 }, (_, i) => `Homework ${i + 1} ✅`);
+    const homeworks = Array.from({ length: 20 }, (_, i) => `Homework${i + 1}`);
 
     return (
         <div className="relative z-50" ref={dropdownRef}>
