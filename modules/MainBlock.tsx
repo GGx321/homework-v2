@@ -4,7 +4,7 @@ import Image from "next/image";
 const MainBlock = () => {
     return (
         <main className="grid grid-cols-2 items-center h-screen w-full px-[7%]">
-            <div className="justify-center text-white animate-fade-right animate-ease-in-out">
+            <div className="justify-center text-white animate-fade-right animate-delay-300 animate-ease-in-out">
                 <div className="text-2xl font-bold mb-5">
                     Добро пожаловать на Home Work v3!
                 </div>
@@ -24,7 +24,7 @@ const MainBlock = () => {
                     Проекты
                 </Link>
             </div>
-            <div className="justify-items-center animate-fade-left animate-ease-in-out">
+            <div className="justify-items-center animate-fade-left animate-delay-300 animate-ease-in-out">
             <Image
                     src="/img/logo1.svg"
                     alt="Logo"
